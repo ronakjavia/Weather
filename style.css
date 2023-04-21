@@ -7,41 +7,76 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  font-size: 100%;
+}
+
+.cards {
+  background: rgba( 0, 0, 0, 0.30 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 11.5px );
+  -webkit-backdrop-filter: blur( 11.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 700px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.search {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 40px 0px 30px 0px;
 }
 
-/* designing the weather app container */
-.container {
-  width: 600px;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px;
-}
-
-/* designing the search area */
-.searchData {
-  border: 1px solid black;
-}
-
-.searchData input {
-  border: transparent;
-  padding: 5px;
-}
-
-.searchData button {
-  border: transparent;
-  padding: 5px 15px;
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 34px;
+  width: 34px;
+  outline: none;
+  background: rgba(120, 101, 101, 0.25);
+  color: rgb(0, 0, 0);
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 5px 0px 0px 2px;
 }
 
-/* designing the city weather data */
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.5em 2em;
+  border-radius: 24px;
+  background: rgba( 0, 0, 0, 0.30 );
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(50% - 90px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1{
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
 .cityWeatherData {
   display: flex;
   flex-direction: column;
@@ -61,4 +96,25 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+   box-shadow: 5 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 11.5px );
+  -webkit-backdrop-filter: blur( 11.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 10px 20px;
+}
+.card p:first-child{
+  font-weight: 100;
+  font-size: 15px;
+  color: rgb(184, 89, 89)
+}
+
+.card p:last-child{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.description {
+  text-transform: capitalize;
 }
